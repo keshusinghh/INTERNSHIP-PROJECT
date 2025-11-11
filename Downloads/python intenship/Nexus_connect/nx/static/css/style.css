@@ -1,0 +1,102 @@
+/* Custom styles for Nexus Board */
+
+/* Hero section styling */
+.hero-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    padding: 4rem 0;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Feature section styling */
+#about {
+    background-color: #ffffff;
+}
+
+#about .col-md-4 {
+    transition: transform 0.3s ease;
+}
+
+#about .col-md-4:hover {
+    transform: translateY(-10px);
+}
+
+/* Task card styling */
+.task-card {
+    transition: transform 0.2s ease;
+    border-left: 4px solid #0d6efd;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Status-specific styling */
+.card-header.to-do {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.card-header.in-progress {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.card-header.done {
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+/* Dashboard improvements */
+.dashboard-header {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Chart container */
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 100%;
+}
+
+/* Custom navbar styling */
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Footer styling */
+footer {
+    margin-top: auto;
+}
+
+/* Make the body take up full height for sticky footer */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}
