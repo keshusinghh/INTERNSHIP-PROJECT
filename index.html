@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Board - Project Management Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Nexus Board</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light" href="{{ url_for('login') }}">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section py-5">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="my-5">
+                        <h1 class="display-5 fw-bolder text-primary mb-2">Welcome to Nexus Board</h1>
+                        <p class="lead mb-4">A powerful project management tool designed to streamline your workflow and boost team productivity</p>
+                        <div class="d-grid gap-3 d-sm-flex">
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{{ url_for('register') }}">Get Started</a>
+                            <a class="btn btn-outline-primary btn-lg px-4" href="#about">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{{ url_for('static', filename='images/hero-image.svg') }}" alt="Project Management" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center mb-5">About Us</h2>
+                    <p class="text-center mb-5">Nexus Board is a comprehensive project management solution designed to help teams collaborate effectively and deliver projects on time. Our platform provides intuitive tools for task management, progress tracking, and team coordination.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <img src="{{ url_for('static', filename='images/task-icon.svg') }}" alt="Task Management" class="img-fluid mb-3" style="max-width: 100px;">
+                            <h4>Task Management</h4>
+                            <p>Organize tasks into customizable workflows and manage deadlines efficiently</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="{{ url_for('static', filename='images/chart-icon.svg') }}" alt="Progress Tracking" class="img-fluid mb-3" style="max-width: 100px;">
+                            <h4>Progress Tracking</h4>
+                            <p>Track project progress in real-time and visualize data with interactive charts</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="{{ url_for('static', filename='images/team-icon.svg') }}" alt="Team Collaboration" class="img-fluid mb-3" style="max-width: 100px;">
+                            <h4>Team Collaboration</h4>
+                            <p>Collaborate seamlessly with team members and improve communication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h2 class="mb-4">Ready to boost your productivity?</h2>
+                        <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Nexus Board 2023. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
